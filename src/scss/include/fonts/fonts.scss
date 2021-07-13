@@ -1,9 +1,19 @@
 @font-face {
-	font-weight: 400;
-	font-family: "Roboto";
+	font-weight: 800;
+	font-family: "FiraSans";
 	font-style: normal;
 	font-display: swap;
 	src:
-		url("../fonts/roboto-regular.woff2") format("woff2"),
-		url("../fonts/roboto-regular.woff") format("woff");
+		url("../fonts/FiraSans-ExtraBold.woff2") format("woff2"),
+		url("../fonts/FiraSans-ExtraBold.woff") format("woff");
+}
+
+@font-face {
+	font-weight: 100;
+	font-family: "FiraSans";
+	font-style: normal;
+	font-display: swap;
+	src:
+		url("../fonts/FiraSans-Thin.woff2") format("woff2"),
+		url("../fonts/FiraSans-Thin.woff") format("woff");
 }

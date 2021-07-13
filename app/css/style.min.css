@@ -1,0 +1,185 @@
+@font-face {
+  font-weight: 800;
+  font-family: FiraSans;
+  font-style: normal;
+  font-display: swap;
+  src: url(../fonts/FiraSans-ExtraBold.woff2) format("woff2"),url(../fonts/FiraSans-ExtraBold.woff) format("woff");
+}
+
+@font-face {
+  font-weight: 100;
+  font-family: FiraSans;
+  font-style: normal;
+  font-display: swap;
+  src: url(../fonts/FiraSans-Thin.woff2) format("woff2"),url(../fonts/FiraSans-Thin.woff) format("woff");
+}
+
+*,
+::after,
+::before {
+  -webkit-box-sizing: inherit;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  color: #333;
+  font-family: FiraSans,sans-serif;
+  background-color: #a2db7a;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: FiraSans,sans-serif;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  clip: rect(0 0 0 0);
+}
+
+.site-container {
+  width: 100%;
+  max-width: 1470px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.page-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.page-main {
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+}
+
+.button_reset {
+  margin: 0;
+  padding: 0;
+  background-color: transparent;
+  border: none;
+}
+
+.header__title {
+  margin: 0;
+  color: #333;
+  font-size: 2.5rem;
+}
+
+.morgan-hero {
+  position: relative;
+  z-index: 10;
+  min-height: 100vh;
+}
+
+.morgan-hero__info {
+  position: absolute;
+  top: 100px;
+  left: 50%;
+  z-index: 15;
+  text-align: center;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+
+.morgan-hero__video {
+  width: 100%;
+  height: 100%;
+}
+
+.morgan-hero__title {
+  margin: 0 0 30px;
+  color: #fff;
+  font-weight: 100;
+  font-size: 6.25rem;
+  font-family: FiraSans,sans-serif;
+  text-align: center;
+}
+
+.morgan-hero__title span {
+  font-weight: 800;
+}
+
+.morgan-hero__button {
+  width: 120px;
+  height: 120px;
+  color: #fff;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.main {
+  color: #444;
+}
+
+.footer {
+  background-color: #fff;
+}
+
+.footer__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  padding: 30px 0;
+}
+
+.footer__text {
+  margin: 0;
+  font-size: 1.75rem;
+  line-height: 1.4;
+  text-transform: uppercase;
+}
+
+.footer .icon-wraning {
+  width: 52px;
+  height: 52px;
+  margin-left: 20px;
+}
+
+@media (min-width:2100px) {
+  body {
+    zoom: 1.2;
+  }
+}
+
+@media (max-width:1440px) {
+  .header__title {
+    font-size: 1.25rem;
+  }
+}
+/*# sourceMappingURL=style.min.css.map */

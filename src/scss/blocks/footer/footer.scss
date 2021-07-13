@@ -1,3 +1,23 @@
 .footer {
-	color: red;
+	background-color: $color-white;
+
+	&__container {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		padding: 30px 0;
+	}
+
+	&__text {
+		margin: 0;
+		font-size: rem(28px);
+		line-height: 1.4;
+		text-transform: uppercase;
+	}
+
+	.icon-wraning {
+		width: 52px;
+		height: 52px;
+		margin-left: 20px;
+	}
 }

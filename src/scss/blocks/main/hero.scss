@@ -1,11 +1,42 @@
-.hero {
-	background-color: red;
+.morgan-hero {
+	position: relative;
+	z-index: 10;
+	min-height: 100vh;
 
-	&__bg-img {
-		width: 900px;
-		height: 500px;
-		background-repeat: no-repeat;
-		background-position: center center;
-		background-size: cover;
+	&__info {
+		position: absolute;
+		top: 100px;
+		left: 50%;
+		z-index: 15;
+		text-align: center;
+		transform: translateX(-50%);
+	}
+
+	&__video {
+		width: 100%;
+		height: 100%;
+	}
+
+	&__title {
+		margin: 0;
+		margin-bottom: 30px;
+		color: $color-white;
+		font-weight: 100;
+		font-size: rem(100px);
+		font-family: $main-font-family;
+		text-align: center;
+
+		span {
+			font-weight: 800;
+		}
+	}
+
+	&__button {
+		width: 120px;
+		height: 120px;
+		color: $color-white;
+		border: 2px solid $color-white;
+		border-radius: 50%;
+		cursor: pointer;
 	}
 }

@@ -12,7 +12,7 @@ body {
 	box-sizing: border-box;
 	color: $main-color;
 	font-family: $main-font-family;
-	background-color: $main-bg-color;
+	background-color: $color-green;
 
 	@include _2100 {
 		zoom: 1.2;
@@ -57,4 +57,11 @@ h6 {
 
 .page-main {
 	flex-grow: 1;
+}
+
+.button_reset {
+	margin: 0;
+	padding: 0;
+	background-color: transparent;
+	border: none;
 }
