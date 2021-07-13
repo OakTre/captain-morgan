@@ -19,4 +19,4 @@ jobs:
       - run: npm ci
       - run: gulp build
       # Deploy
-      - run: cd app && rsync -e "ssh -p 20022 -i $HOME/.ssh/key -o StrictHostKeyChecking=no" --archive --compress --delete . baza3@baza3.beget.tech:/home/b/baza3/degorov.ru/public_html/captain-morgan
+      - run: cd app && rsync -e "ssh -i $HOME/.ssh/key -o StrictHostKeyChecking=no" --archive --compress --delete . baza3@baza3.beget.tech:/home/b/baza3/degorov.ru/public_html/captain-morgan
