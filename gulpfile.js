@@ -221,7 +221,7 @@ const scriptsBuild = () => {
         .pipe(dest("./app/js"))
 
 }
-exports.build = series(clean, parallel(pugBuild, scriptsBuild, stylesVendor, imgToApp, toWebp, svgSprites, copySvg, copyFonts), stylesBuild, watchFiles);
+exports.build = series(clean, parallel(pugBuild, scriptsBuild, stylesVendor, imgToApp, toWebp, svgSprites, copySvg, copyFonts), stylesBuild);
 
 
 // оптимизировать изображения ---- gulp.minifyImg
