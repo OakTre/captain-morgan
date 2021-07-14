@@ -17,3 +17,13 @@
 		url("../fonts/FiraSans-Thin.woff2") format("woff2"),
 		url("../fonts/FiraSans-Thin.woff") format("woff");
 }
+
+@font-face {
+	font-weight: 400;
+	font-family: "FiraSans";
+	font-style: normal;
+	font-display: swap;
+	src:
+		url("../fonts/FiraSans-Regular.woff2") format("woff2"),
+		url("../fonts/FiraSans-Regular.woff") format("woff");
+}

@@ -48,6 +48,7 @@
         "webpack-stream": "^6.1.2"
     },
     "dependencies": {
+        "gsap": "^3.7.0",
         "normalize.css": "^8.0.1",
         "pug-include-glob": "^0.4.3"
     }

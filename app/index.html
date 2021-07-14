@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Описание сайта">
-    <title>Главная | Название сайта</title>
+    <title>Главная | Captain Morgan</title>
     <link rel="stylesheet" href="./css/vendor.min.css?v=0.0.0.0">
     <link rel="stylesheet" href="./css/style.min.css?v=0.0.0.0">
   </head>
@@ -14,9 +14,29 @@
       <header class="header"></header>
       <main class="page-main main">
         <section class="morgan-hero">
-          <div class="morgan-hero__info">
-            <h1 class="morgan-hero__title"><span>	Только свежий<br></span>	и чистый тросник</h1>
+          <article class="morgan-hero__info">
+            <div class="_overflow">
+              <h1 class="morgan-hero__title"><span>	Только свежий<br></span>	и чистый тросник</h1>
+            </div>
             <button class="button_reset morgan-hero__button">	Начать</button>
+          </article>
+          <div class="morgan-hero__texts">
+            <article class="morgan-title morgan-title_first overflow" data-text="second">
+              <h3>	Сейчас начнем измельчать</h3>
+              <button class="button_reset play-button-js main-button">	Поехали!</button>
+            </article>
+            <article class="morgan-title morgan-title_third overflow" data-text="third">
+              <h3>	Смешиваем патоку<br>с водой<span>	и немного дрожжи</span></h3>
+              <button class="button_reset play-button-js main-button">	Понятно</button>
+            </article>
+            <article class="morgan-title morgan-title_thourth overflow" data-text="thourth">
+              <h3>	Выпариваем при<br><span>	93 градусов</span></h3>
+              <button class="button_reset play-button-js main-button">	Дальше</button>
+            </article>
+            <article class="morgan-title morgan-title_fifth overflow" data-text="fifth">
+              <h3>	Разливаем<br><span>	в бутылки</span></h3>
+              <button class="button_reset play-button-js main-button">	Вперед!</button>
+            </article>
           </div>
           <video class="morgan-hero__video" src="./resourses/video.mp4" playsinline muted></video>
         </section>

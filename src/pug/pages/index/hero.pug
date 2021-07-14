@@ -1,10 +1,47 @@
 section.morgan-hero
-	.morgan-hero__info
-		h1.morgan-hero__title
-			span
-				|	Только свежий
-				br
-			|	и чистый тросник
+	article.morgan-hero__info
+		._overflow
+			h1.morgan-hero__title
+				span
+					|	Только свежий
+					br
+				|	и чистый тросник
 		button.button_reset.morgan-hero__button
 			|	Начать
+	.morgan-hero__texts
+		article(class="morgan-title morgan-title_first overflow", data-text="second")
+			h3
+				|	Сейчас начнем измельчать
+			button.button_reset.play-button-js.main-button
+				|	Поехали!
+		article(class="morgan-title morgan-title_third overflow", data-text="third")
+			h3
+				|	Смешиваем патоку
+				br
+				| с водой
+				span
+					|	и немного дрожжи
+			button.button_reset.play-button-js.main-button
+				|	Понятно
+
+		article(class="morgan-title morgan-title_thourth overflow", data-text="thourth")
+			h3
+				|	Выпариваем при
+				br
+				span
+					|	93 градусов
+			button.button_reset.play-button-js.main-button
+				|	Дальше
+
+
+		article(class="morgan-title morgan-title_fifth overflow", data-text="fifth")
+			h3
+				|	Разливаем
+				br
+				span
+					|	в бутылки
+			button.button_reset.play-button-js.main-button
+				|	Вперед!
+
+
 	video(class="morgan-hero__video", src="./resourses/video.mp4", playsinline, muted)

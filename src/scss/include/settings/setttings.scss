@@ -11,17 +11,18 @@ html {
 body {
 	box-sizing: border-box;
 	color: $main-color;
+	font-weight: 400;
 	font-family: $main-font-family;
 	background-color: $color-green;
-
-	@include _2100 {
-		zoom: 1.2;
-	}
 }
 
 img {
 	max-width: 100%;
 	height: auto;
+	vertical-align: middle;
+}
+
+video {
 	vertical-align: middle;
 }
 
