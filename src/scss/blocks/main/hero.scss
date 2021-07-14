@@ -30,7 +30,6 @@
 		min-height: 100%;
 		line-height: 1.2;
 		transform: translate(-50%, -50%);
-		transition: 1s opacity;
 	}
 
 	&__title {
@@ -40,9 +39,15 @@
 		font-size: rem(100px);
 		font-family: $main-font-family;
 		text-align: center;
+		transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out, transform 0.3s ease-in-out;
 
 		span {
 			font-weight: 800;
+		}
+
+		&._active {
+			transform: translateY(-100%);
+			opacity: 0;
 		}
 	}
 
@@ -77,6 +82,48 @@
 		&:hover {
 			color: $color-green;
 			background-color: $color-white;
+		}
+	}
+
+	@include _1680 {
+		&__video {
+			width: 100%;
+			min-width: 117%;
+			min-height: 101%;
+		}
+	}
+
+	@include _1536 {
+		&__video {
+			min-width: 101%;
+		}
+
+		&__title {
+			font-size: rem(80px);
+		}
+
+		&__button {
+			margin-top: 40px;
+		}
+	}
+
+	@include _1440 {
+		&__video {
+			min-width: 113%;
+		}
+
+		&__info {
+			top: 70px;
+		}
+
+		&__title {
+			font-size: 60px;
+		}
+	}
+
+	@include _1366 {
+		&__video {
+			min-width: 100%;
 		}
 	}
 }

@@ -1,6 +1,3 @@
-import gsap from "gsap";
-
-
 export default () => {
 	const buttonHero = document.querySelector(".morgan-hero__button");
 	const video = document.querySelector(".morgan-hero__video");
@@ -38,10 +35,7 @@ export default () => {
 
 	buttonHero.addEventListener("click", function(){
 
-		gsap.to(title, {
-			y: "-100%",
-			duration: 0.8
-		})
+		title.classList.add("_active");
 
 		this.classList.add("_active");
 

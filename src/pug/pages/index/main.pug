@@ -1,2 +1,15 @@
 main.page-main.main
+	div(class="warining-modal", aria-hidden="true")
+		.warining-modal_overlay
+		.warining-modal__content
+			h3.warining-modal__title
+				|	Тебе уже есть 18 лет?
+			.warining-modal_button-wrap
+				button.button_reset.main-button.warining-modal__button._age-yes
+					|	Да
+				button.button_reset.main-button.warining-modal__button._age-no
+					|	Нет
+			p.warining-modal__cancel
+				|	Жаль, будем рады тебя видеть, когда тебе исполнится 18&nbsp;лет.
+
 	include hero.pug
