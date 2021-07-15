@@ -3,6 +3,7 @@ import lazyImages from "./modules/lazyImages";
 import videoInit from "./blocks/videoInit";
 import openMenu from "./blocks/openMenu";
 import { disableBodyScroll, enableBodyScroll, clearAllBodyScrollLocks } from 'body-scroll-lock';
+import SimpleBar from "simplebar";
 
 documentReady(() => {
 	lazyImages();
@@ -38,6 +39,10 @@ documentReady(() => {
 				warningModalContent.querySelector(".warining-modal__button._age-no").classList.add("_active");
 			}
 		})
+	}
+
+	if (window.matchMedia("(max-width: 740px)").matches) {
+		new SimpleBar(document.querySelector(".menu__content_inner"));
 	}
 
 });

@@ -20,13 +20,23 @@
 		align-self: center;
 		justify-content: center;
 		height: 100%;
+
+		.simplebar-track.simplebar-vertical .simplebar-scrollbar::before {
+			background-color: $color-dark;
+			opacity: 1;
+		}
+
+		.simplebar-track.simplebar-vertical {
+			top: 60px;
+			width: 8px;
+		}
 	}
 
 	&__title {
 		margin: 0;
-		margin-bottom: 60px;
+		margin-top: 30px;
 		font-weight: 800;
-		font-size: rem(32px);
+		font-size: rem(64px);
 		font-family: $main-font-family;
 		letter-spacing: 2px;
 		text-align: center;
@@ -34,6 +44,7 @@
 
 	&__list {
 		display: flex;
+		flex-grow: 1;
 		align-items: center;
 		justify-content: space-evenly;
 	}
@@ -68,6 +79,147 @@
 		font-size: rem(24px);
 		font-family: $main-font-family;
 		text-align: center;
+	}
+
+	@include _2100 {
+		&__item-img {
+			width: 310px;
+			height: 610px;
+		}
+	}
+
+	@include _1536 {
+		&__title {
+			margin-top: 0;
+		}
+
+		&__item-img {
+			height: 330px;
+		}
+	}
+
+	@include _1440 {
+		&__title {
+			margin-top: 40px;
+			font-size: rem(48px);
+		}
+	}
+
+	@include _1366 {
+		&__item-img {
+			height: 270px;
+		}
+
+		&__item-title {
+			font-size: rem(20px);
+		}
+
+		&__title {
+			margin-top: 30px;
+			font-size: rem(40px);
+		}
+	}
+
+	@include _1280 {
+		&__title {
+			margin-top: 0;
+			margin-bottom: 40px;
+		}
+	}
+
+	@include _1200 {
+		&__title {
+			margin-top: 50px;
+			margin-bottom: 0;
+		}
+	}
+
+	@include _992 {
+		&__title {
+			margin-top: 0;
+			margin-bottom: 30px;
+		}
+	}
+
+	@include _769 {
+		&__list {
+			flex-grow: 0;
+			// flex-wrap: wrap;
+		}
+
+		&__title {
+			margin-bottom: 60px;
+		}
+
+		&__item-img {
+			width: 240px;
+		}
+	}
+
+	@include _740 {
+		&__list {
+			flex-direction: column;
+			align-items: stretch;
+			justify-content: stretch;
+		}
+
+		&__content {
+			padding-top: 116px;
+		}
+
+		&__title {
+			margin-bottom: 40px;
+		}
+
+		&__content_inner {
+			align-items: stretch;
+			justify-content: stretch;
+			overflow-y: auto;
+		}
+
+		&__item {
+			margin-bottom: 50px;
+
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+	}
+
+	@include _500 {
+		&__title {
+			font-size: rem(32px);
+		}
+
+		&__item-img {
+			height: 240px;
+		}
+
+		&__item-title {
+			font-size: 1rem;
+		}
+
+		&__content {
+			padding: 30px;
+			padding-top: 116px;
+		}
+	}
+
+	@include _375 {
+		&__content {
+			padding-top: 136px;
+		}
+	}
+
+	@include _320 {
+		&__title {
+			font-size: 1.8rem;
+		}
+
+		&__item-img {
+			height: 180px;
+			margin-bottom: 30px;
+		}
 	}
 }
 
