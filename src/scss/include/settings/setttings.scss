@@ -66,3 +66,25 @@ h6 {
 	background-color: transparent;
 	border: none;
 }
+
+.main-button {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	width: 300px;
+	margin-top: 60px;
+	padding: 16px 35px;
+	color: $color-white;
+	font-weight: 800;
+	font-size: 2rem;
+	font-family: $main-font-family;
+	border: 2px solid $color-white;
+	border-radius: 3px;
+	cursor: pointer;
+	transition: color 0.3s, background-color 0.3s, opacity 0.3s ease-in-out, visibility 0.3s ease-in-out, transform 0.3s ease-in-out;
+
+	&:hover {
+		color: $color-green;
+		background-color: $color-white;
+	}
+}

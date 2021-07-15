@@ -1,12 +1,12 @@
 section.morgan-hero
 	article.morgan-hero__info
 		._overflow
-			h1.morgan-hero__title
+			h1.morgan-hero__title._active
 				span
 					|	Только свежий
 					br
 				|	и чистый тросник
-		button.button_reset.morgan-hero__button
+		button.button_reset.morgan-hero__button._active
 			|	Начать
 	.morgan-hero__texts
 		article(class="morgan-title morgan-title_first overflow", data-text="second")
@@ -42,6 +42,8 @@ section.morgan-hero
 					|	в бутылки
 			button.button_reset.play-button-js.main-button
 				|	Вперед!
+	button.morgan-hero__again.button_reset.main-button
+		|	Заново
 
 
 	video(class="morgan-hero__video", src="./resourses/video.mp4", playsinline, muted)

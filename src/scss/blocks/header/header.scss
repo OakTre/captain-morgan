@@ -1,11 +1,27 @@
 .header {
-	&__title {
-		margin: 0;
-		color: $main-color;
-		font-size: rem(40px);
+	position: absolute;
+	top: 20px;
+	left: 0;
+	z-index: 150;
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+	width: 100%;
 
-		@include _1440 {
-			font-size: rem(20px);
+	&__logo {
+		width: 100px;
+		margin-left: 60px;
+	}
+
+	@include _1366 {
+		&__logo {
+			margin-left: 30px;
+		}
+	}
+
+	@include _992 {
+		&__logo {
+			width: 80px;
 		}
 	}
 }

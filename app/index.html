@@ -11,7 +11,9 @@
   </head>
   <body class="page-home">
     <div class="page-wrapper">
-      <header class="header"></header>
+      <header class="header">
+        <div class="header__logo"><img class="logo" src="./img/logo-white.png" alt="Логотип"></div>
+      </header>
       <main class="page-main main">
         <div class="warining-modal" aria-hidden="true">
           <div class="warining-modal_overlay"></div>
@@ -27,9 +29,9 @@
         <section class="morgan-hero">
           <article class="morgan-hero__info">
             <div class="_overflow">
-              <h1 class="morgan-hero__title"><span>	Только свежий<br></span>	и чистый тросник</h1>
+              <h1 class="morgan-hero__title _active"><span>	Только свежий<br></span>	и чистый тросник</h1>
             </div>
-            <button class="button_reset morgan-hero__button">	Начать</button>
+            <button class="button_reset morgan-hero__button _active">	Начать</button>
           </article>
           <div class="morgan-hero__texts">
             <article class="morgan-title morgan-title_first overflow" data-text="second">
@@ -49,8 +51,13 @@
               <button class="button_reset play-button-js main-button">	Вперед!</button>
             </article>
           </div>
+          <button class="morgan-hero__again button_reset main-button">	Заново</button>
           <video class="morgan-hero__video" src="./resourses/video.mp4" playsinline muted></video>
         </section>
+        <div class="page-main__links"><a class="inst-link" href="">
+            <svg class="icon icon-instagram">
+              <use xlink:href="img/sprite.svg#instagram"></use>
+            </svg></a><a class="policy" href="#">	Политика конфиденциальности</a></div>
       </main>
       <footer class="footer">
         <div class="site-container">

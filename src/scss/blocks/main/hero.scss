@@ -36,7 +36,7 @@
 		margin: 0;
 		color: $color-white;
 		font-weight: 100;
-		font-size: rem(100px);
+		font-size: rem(80px);
 		font-family: $main-font-family;
 		text-align: center;
 		transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out, transform 0.3s ease-in-out;
@@ -85,6 +85,33 @@
 		}
 	}
 
+	&__again {
+		position: absolute;
+		bottom: 30px;
+		left: 50%;
+		z-index: 50;
+		width: 200px;
+		margin: 0;
+		padding-top: 12px;
+		padding-bottom: 12px;
+		font-size: rem(24px);
+		transform: translateX(-50%);
+		visibility: hidden;
+		opacity: 0;
+		transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+		pointer-events: none;
+
+		&:hover {
+			color: #cd3408;
+		}
+
+		&._active {
+			visibility: visible;
+			opacity: 1;
+			pointer-events: auto;
+		}
+	}
+
 	@include _1680 {
 		&__video {
 			width: 100%;
@@ -96,10 +123,6 @@
 	@include _1536 {
 		&__video {
 			min-width: 101%;
-		}
-
-		&__title {
-			font-size: rem(80px);
 		}
 
 		&__button {
@@ -117,13 +140,63 @@
 		}
 
 		&__title {
-			font-size: 60px;
+			font-size: rem(60px);
 		}
 	}
 
 	@include _1366 {
 		&__video {
 			min-width: 100%;
+		}
+	}
+
+	@include _1280 {
+		&__again {
+			bottom: 40px;
+		}
+	}
+
+	@include _1200 {
+		&__video {
+			width: 153%;
+		}
+
+		&__info {
+			top: 110px;
+		}
+
+		&__again {
+			bottom: 18px;
+		}
+	}
+
+	@include _992 {
+		&__video {
+			width: 131%;
+		}
+
+		&__title {
+			font-size: rem(50px);
+		}
+
+		&__info {
+			top: 90px;
+		}
+
+		&__again {
+			right: 30px;
+			left: auto;
+			transform: none;
+		}
+	}
+
+	@include _940 {
+		&__video {
+			width: auto;
+		}
+
+		&__info {
+			top: 150px;
 		}
 	}
 }

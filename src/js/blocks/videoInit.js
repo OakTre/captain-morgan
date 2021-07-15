@@ -4,6 +4,7 @@ export default () => {
 	const info = document.querySelector(".morgan-hero__info");
 	const title = document.querySelector(".morgan-hero__title");
 	const playButton = document.querySelector(".play-button-js");
+	const againButton = document.querySelector(".morgan-hero__again");
 
 	let currentStep = 'first';
 	let steps = {
@@ -34,7 +35,6 @@ export default () => {
 	});
 
 	buttonHero.addEventListener("click", function(){
-
 		title.classList.add("_active");
 
 		this.classList.add("_active");
@@ -47,7 +47,6 @@ export default () => {
 		let curTime = this.currentTime;
 
 		if (currentStep) {
-
 			if (curTime > steps[currentStep].time) {
 			  currentStep = steps[currentStep].nextStep;
 
@@ -57,7 +56,6 @@ export default () => {
 
 			  this.pause();
 			}
-
 		} else {
 			video.stop();
 		}
@@ -72,5 +70,20 @@ export default () => {
 			video.play();
 		});
 	}
+
+	video.addEventListener("ended", function(){
+		setTimeout(function(){
+			againButton.classList.add("_active");
+		}, 200);
+	});
+
+	againButton.addEventListener("click", function(){
+		info.querySelector(".morgan-hero__button").classList.remove("_active");
+		info.querySelector(".morgan-hero__title").classList.remove("_active");
+		this.classList.remove("_active");
+
+		currentStep = 'first';
+		video.currentTime = 0;
+	});
 
 }

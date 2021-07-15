@@ -20,7 +20,7 @@
 	}
 
 	&_first {
-		top: 90px;
+		top: 100px;
 		left: 50%;
 		text-align: center;
 		transform: translateX(-50%);
@@ -215,26 +215,122 @@
 			}
 		}
 	}
-}
 
-.main-button {
-	display: inline-flex;
-	align-items: center;
-	justify-content: center;
-	width: 300px;
-	margin-top: 60px;
-	padding: 16px 35px;
-	color: $color-white;
-	font-weight: 800;
-	font-size: 2rem;
-	font-family: $main-font-family;
-	border: 2px solid $color-white;
-	border-radius: 3px;
-	cursor: pointer;
-	transition: color 0.3s, background-color 0.3s, opacity 0.3s ease-in-out, visibility 0.3s ease-in-out, transform 0.3s ease-in-out;
+	@include _1366 {
+		&_first {
+			button {
+				width: 260px;
+				padding-top: 15px;
+				padding-bottom: 15px;
+				font-size: rem(28px);
+			}
+		}
 
-	&:hover {
-		color: $color-green;
-		background-color: $color-white;
+		&_third {
+			button {
+				width: 260px;
+				padding-top: 15px;
+				padding-bottom: 15px;
+				font-size: rem(28px);
+			}
+		}
+
+		&_thourth {
+			button {
+				width: 260px;
+				padding-top: 15px;
+				padding-bottom: 15px;
+				font-size: rem(28px);
+			}
+		}
+
+		&_fifth {
+			button {
+				width: 260px;
+				padding-top: 15px;
+				padding-bottom: 15px;
+				font-size: rem(28px);
+			}
+		}
+	}
+
+	@include _1200 {
+		&_first {
+			top: 85px;
+		}
+
+		&_third {
+			left: 40px;
+
+			button {
+				margin-top: rem(40px);
+			}
+		}
+
+		&_thourth {
+			left: 30px;
+
+			button {
+				margin-top: rem(40px);
+			}
+		}
+
+		&_fifth {
+			right: 50px;
+
+			h3 {
+				font-size: rem(60px);
+			}
+		}
+	}
+
+	@include _992 {
+		&_first {
+			margin-right: -50%;
+
+			h3 {
+				font-size: rem(40px);
+			}
+		}
+
+		&_third {
+			h3 {
+				font-size: rem(40px);
+			}
+
+			button {
+				width: 240px;
+				font-size: rem(24px);
+			}
+		}
+
+		&_thourth {
+			h3 {
+				font-size: rem(40px);
+			}
+
+			button {
+				width: 240px;
+				font-size: rem(24px);
+			}
+		}
+
+		&_fifth {
+			h3 {
+				font-size: rem(50px);
+			}
+
+			button {
+				width: 240px;
+				margin-top: 40px;
+				font-size: rem(24px);
+			}
+		}
+	}
+
+	@include _940 {
+		&_first {
+			top: 165px;
+		}
 	}
 }

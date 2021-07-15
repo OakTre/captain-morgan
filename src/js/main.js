@@ -9,6 +9,8 @@ documentReady(() => {
 
 	const warningModal = document.querySelector(".warining-modal");
 	const warningModalContent = document.querySelector(".warining-modal__content");
+	const heroTitle = document.querySelector(".morgan-hero__title");
+	const heroButton = document.querySelector(".morgan-hero__button");
 
 	disableBodyScroll(warningModalContent);
 
@@ -19,6 +21,8 @@ documentReady(() => {
 
 				setTimeout(()=>{
 					warningModal.style.display = "none";
+					heroTitle.classList.remove("_active");
+					heroButton.classList.remove("_active");
 				}, 200)
 
 				enableBodyScroll(warningModal);

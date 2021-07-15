@@ -100,14 +100,60 @@ h6 {
   border: none;
 }
 
+.main-button {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 300px;
+  margin-top: 60px;
+  padding: 16px 35px;
+  color: #fff;
+  font-weight: 800;
+  font-size: 2rem;
+  font-family: FiraSans,sans-serif;
+  border: 2px solid #fff;
+  border-radius: 3px;
+  cursor: pointer;
+  -webkit-transition: color .3s,background-color .3s,opacity .3s ease-in-out,visibility .3s ease-in-out,-webkit-transform .3s ease-in-out;
+  transition: color .3s,background-color .3s,opacity .3s ease-in-out,visibility .3s ease-in-out,transform .3s ease-in-out,-webkit-transform .3s ease-in-out;
+  -o-transition: color .3s,background-color .3s,opacity .3s ease-in-out,visibility .3s ease-in-out,transform .3s ease-in-out;
+}
+
+.main-button:hover {
+  color: #a2db7a;
+  background-color: #fff;
+}
+
 .overflow {
   overflow: hidden!important;
 }
 
-.header__title {
-  margin: 0;
-  color: #333;
-  font-size: 2.5rem;
+.header {
+  position: absolute;
+  top: 20px;
+  left: 0;
+  z-index: 150;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  width: 100%;
+}
+
+.header__logo {
+  width: 100px;
+  margin-left: 60px;
 }
 
 .morgan-hero {
@@ -151,7 +197,7 @@ h6 {
   margin: 0;
   color: #fff;
   font-weight: 100;
-  font-size: 6.25rem;
+  font-size: 5rem;
   font-family: FiraSans,sans-serif;
   text-align: center;
   -webkit-transition: opacity .3s ease-in-out,visibility .3s ease-in-out,-webkit-transform .3s ease-in-out;
@@ -214,6 +260,37 @@ h6 {
   background-color: #fff;
 }
 
+.morgan-hero__again {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  z-index: 50;
+  width: 200px;
+  margin: 0;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  font-size: 1.5rem;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transition: opacity .3s ease-in-out,visibility .3s ease-in-out;
+  -o-transition: opacity .3s ease-in-out,visibility .3s ease-in-out;
+  transition: opacity .3s ease-in-out,visibility .3s ease-in-out;
+  pointer-events: none;
+}
+
+.morgan-hero__again:hover {
+  color: #cd3408;
+}
+
+.morgan-hero__again._active {
+  visibility: visible;
+  opacity: 1;
+  pointer-events: auto;
+}
+
 .morgan-title {
   position: absolute;
   z-index: 25;
@@ -241,7 +318,7 @@ h6 {
 }
 
 .morgan-title_first {
-  top: 90px;
+  top: 100px;
   left: 50%;
   text-align: center;
   -webkit-transform: translateX(-50%);
@@ -424,36 +501,6 @@ h6 {
   opacity: 1;
 }
 
-.main-button {
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  width: 300px;
-  margin-top: 60px;
-  padding: 16px 35px;
-  color: #fff;
-  font-weight: 800;
-  font-size: 2rem;
-  font-family: FiraSans,sans-serif;
-  border: 2px solid #fff;
-  border-radius: 3px;
-  cursor: pointer;
-  -webkit-transition: color .3s,background-color .3s,opacity .3s ease-in-out,visibility .3s ease-in-out,-webkit-transform .3s ease-in-out;
-  transition: color .3s,background-color .3s,opacity .3s ease-in-out,visibility .3s ease-in-out,transform .3s ease-in-out,-webkit-transform .3s ease-in-out;
-  -o-transition: color .3s,background-color .3s,opacity .3s ease-in-out,visibility .3s ease-in-out,transform .3s ease-in-out;
-}
-
-.main-button:hover {
-  color: #a2db7a;
-  background-color: #fff;
-}
-
 .warining-modal {
   position: fixed;
   top: 0;
@@ -560,6 +607,63 @@ h6 {
   display: block;
 }
 
+.page-main__links {
+  position: absolute;
+  bottom: 30px;
+  left: 60px;
+  z-index: 50;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.inst-link {
+  display: block;
+  width: 40px;
+  height: 40px;
+}
+
+.inst-link .icon-instagram {
+  display: block;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+  opacity: .6;
+  -webkit-transition: opacity .3s ease-in-out;
+  -o-transition: opacity .3s ease-in-out;
+  transition: opacity .3s ease-in-out;
+  fill: #fff;
+}
+
+.inst-link .icon-instagram:hover {
+  opacity: 1;
+}
+
+.policy {
+  margin-left: 20px;
+  color: #fff;
+  font-weight: 400;
+  font-size: 1rem;
+  font-family: FiraSans,sans-serif;
+  text-transform: uppercase;
+  text-decoration: none;
+  opacity: .6;
+  -webkit-transition: opacity .3s ease-in-out;
+  -o-transition: opacity .3s ease-in-out;
+  transition: opacity .3s ease-in-out;
+}
+
+.policy:hover {
+  opacity: 1;
+}
+
 .main {
   color: #444;
 }
@@ -607,10 +711,6 @@ h6 {
     min-width: 101%;
   }
 
-  .morgan-hero__title {
-    font-size: 5rem;
-  }
-
   .morgan-hero__button {
     margin-top: 40px;
   }
@@ -630,10 +730,6 @@ h6 {
 }
 
 @media (max-width:1440px) {
-  .header__title {
-    font-size: 1.25rem;
-  }
-
   .morgan-hero__video {
     min-width: 113%;
   }
@@ -643,7 +739,7 @@ h6 {
   }
 
   .morgan-hero__title {
-    font-size: 60px;
+    font-size: 3.75rem;
   }
 
   .morgan-title_first {
@@ -666,16 +762,156 @@ h6 {
 }
 
 @media (max-width:1366px) {
+  .header__logo {
+    margin-left: 30px;
+  }
+
   .morgan-hero__video {
     min-width: 100%;
+  }
+
+  .morgan-title_fifth button,
+  .morgan-title_first button,
+  .morgan-title_third button,
+  .morgan-title_thourth button {
+    width: 260px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    font-size: 1.75rem;
   }
 
   .warining-modal__content {
     min-height: 500px;
   }
+
+  .warining-modal__title {
+    font-size: 2.5rem;
+  }
+
+  .page-main__links {
+    left: 30px;
+  }
+}
+
+@media (max-width:1280px) {
+  .morgan-hero__again {
+    bottom: 40px;
+  }
+
+  .warining-modal__content {
+    min-width: 710px;
+    min-height: 430px;
+  }
+
+  .page-main__links {
+    bottom: 22px;
+  }
+
+  .footer__container {
+    padding: 25px 0;
+  }
+}
+
+@media (max-width:1200px) {
+  .morgan-hero__video {
+    width: 153%;
+  }
+
+  .morgan-hero__info {
+    top: 110px;
+  }
+
+  .morgan-hero__again {
+    bottom: 18px;
+  }
+
+  .morgan-title_first {
+    top: 85px;
+  }
+
+  .morgan-title_third {
+    left: 40px;
+  }
+
+  .morgan-title_third button {
+    margin-top: 2.5rem;
+  }
+
+  .morgan-title_thourth {
+    left: 30px;
+  }
+
+  .morgan-title_thourth button {
+    margin-top: 2.5rem;
+  }
+
+  .morgan-title_fifth {
+    right: 50px;
+  }
+
+  .morgan-title_fifth h3 {
+    font-size: 3.75rem;
+  }
 }
 
 @media (max-width:992px) {
+  .header__logo {
+    width: 80px;
+  }
+
+  .morgan-hero__video {
+    width: 131%;
+  }
+
+  .morgan-hero__title {
+    font-size: 3.125rem;
+  }
+
+  .morgan-hero__info {
+    top: 90px;
+  }
+
+  .morgan-hero__again {
+    right: 30px;
+    left: auto;
+    -webkit-transform: none;
+    -ms-transform: none;
+    transform: none;
+  }
+
+  .morgan-title_first {
+    margin-right: -50%;
+  }
+
+  .morgan-title_first h3,
+  .morgan-title_third h3 {
+    font-size: 2.5rem;
+  }
+
+  .morgan-title_third button {
+    width: 240px;
+    font-size: 1.5rem;
+  }
+
+  .morgan-title_thourth h3 {
+    font-size: 2.5rem;
+  }
+
+  .morgan-title_thourth button {
+    width: 240px;
+    font-size: 1.5rem;
+  }
+
+  .morgan-title_fifth h3 {
+    font-size: 3.125rem;
+  }
+
+  .morgan-title_fifth button {
+    width: 240px;
+    margin-top: 40px;
+    font-size: 1.5rem;
+  }
+
   .warining-modal__content {
     top: 0;
     left: 0;
@@ -685,6 +921,29 @@ h6 {
     -webkit-transform: none;
     -ms-transform: none;
     transform: none;
+  }
+
+  .inst-link {
+    width: 30px;
+    height: 30px;
+  }
+
+  .policy {
+    font-size: .875rem;
+  }
+}
+
+@media (max-width:940px) {
+  .morgan-hero__video {
+    width: auto;
+  }
+
+  .morgan-hero__info {
+    top: 150px;
+  }
+
+  .morgan-title_first {
+    top: 165px;
   }
 }
 
