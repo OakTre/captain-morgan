@@ -35,6 +35,12 @@ h6 {
 	font-family: $second-font-family;
 }
 
+ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
 .visually-hidden {
 	position: absolute;
 	width: 1px;

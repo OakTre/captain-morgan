@@ -1,0 +1,14 @@
+- let number = 1;
+- let list = ["Captain Morgan Original Spiced Gold", "Captain Morgan White Rum", "Captain Morgan Dark Rum"]
+.menu
+	.menu__content
+		.menu__content_inner
+			h3.menu__title
+				|	Наша продукция
+			ul.menu__list
+				each val in list
+					li.menu__item
+						.menu__item-img
+							+picture("bottle"+`${ number++ }`+".png", "бутылка")
+						h3.menu__item-title=val
+

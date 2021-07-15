@@ -1,11 +1,13 @@
 import documentReady from "./helpers/documentReady";
 import lazyImages from "./modules/lazyImages";
 import videoInit from "./blocks/videoInit";
+import openMenu from "./blocks/openMenu";
 import { disableBodyScroll, enableBodyScroll, clearAllBodyScrollLocks } from 'body-scroll-lock';
 
 documentReady(() => {
 	lazyImages();
 	videoInit();
+	openMenu();
 
 	const warningModal = document.querySelector(".warining-modal");
 	const warningModalContent = document.querySelector(".warining-modal__content");

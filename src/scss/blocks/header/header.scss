@@ -2,7 +2,7 @@
 	position: absolute;
 	top: 20px;
 	left: 0;
-	z-index: 150;
+	z-index: 160;
 	display: flex;
 	align-items: center;
 	justify-content: flex-start;
@@ -10,7 +10,69 @@
 
 	&__logo {
 		width: 100px;
-		margin-left: 60px;
+		margin-left: 160px;
+	}
+
+	&__burger-name {
+		position: absolute;
+		top: calc(100% + 7px);
+		left: 50%;
+		color: $color-white;
+		font-weight: 400;
+		font-size: rem(14px);
+		transform: translateX(-50%);
+		transition: color 0.3s ease-in-out;
+	}
+
+	&__burger-small-name {
+		display: none;
+
+		&._show {
+			display: block;
+		}
+
+		&._hide {
+			display: none;
+		}
+	}
+
+	&__burger {
+		position: absolute;
+		top: 7px;
+		left: 60px;
+		z-index: 150;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		width: 50px;
+		height: 50px;
+		cursor: pointer;
+
+		.icon-wine {
+			width: 100%;
+			height: 100%;
+			transition: fill 0.3s ease-in-out;
+			fill: $color-white;
+		}
+
+		&._active {
+			.icon-wine {
+				fill: $color-green;
+			}
+
+			.header__burger-name {
+				color: $color-green;
+			}
+
+			.header__burger-small-name._show {
+				display: none;
+			}
+
+			.header__burger-small-name._hide {
+				display: block;
+			}
+		}
 	}
 
 	@include _1366 {
