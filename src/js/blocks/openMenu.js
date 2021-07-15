@@ -16,7 +16,10 @@ export default () => {
 	timeline.to(menu, {
 		left: 0,
 		duration: 0.7,
-		ease: "expo.out"
+		ease: "expo.out",
+		onComplete: function(){
+			menu.classList.add("opened");
+		}
 	}).fromTo(menuTitle, {
 		x: "-100%",
 		opacity: 0
@@ -60,4 +63,14 @@ export default () => {
 	function isReversed(animation) {
 		animation.reversed() ? animation.play() : animation.reverse();
 	}
+
+	document.addEventListener("click", function(e){
+		if (menu.classList.contains("opened")) {
+			if (!e.target.classList.contains("menu") && !e.target.classList.contains("header__burger") && !e.target.classList.contains("menu__content") && !e.target.classList.contains("menu__list") && !e.target.classList.contains("menu__title") && !e.target.classList.contains("menu__content_inner") && !e.target.classList.contains("menu__item") && !e.target.classList.contains("menu__item-img") && !e.target.classList.contains("menu__item-title") && !e.target.classList.contains("header")) {
+				timeline.reverse();
+
+				burgerButton.classList.remove("_active");
+			}
+		}
+	});
 };

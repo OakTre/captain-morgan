@@ -160,6 +160,11 @@ ul {
 .header__logo {
   width: 100px;
   margin-left: 160px;
+  pointer-events: none;
+}
+
+.header__logo img {
+  pointer-events: none;
 }
 
 .header__burger-name {
@@ -175,10 +180,12 @@ ul {
   -webkit-transition: color .3s ease-in-out;
   -o-transition: color .3s ease-in-out;
   transition: color .3s ease-in-out;
+  pointer-events: none;
 }
 
 .header__burger-small-name {
   display: none;
+  pointer-events: none;
 }
 
 .header__burger-small-name._show {
@@ -218,15 +225,16 @@ ul {
   -webkit-transition: fill .3s ease-in-out;
   -o-transition: fill .3s ease-in-out;
   transition: fill .3s ease-in-out;
+  pointer-events: none;
   fill: #fff;
 }
 
 .header__burger._active .icon-wine {
-  fill: #a2db7a;
+  fill: red;
 }
 
 .header__burger._active .header__burger-name {
-  color: #a2db7a;
+  color: red;
 }
 
 .header__burger._active .header__burger-small-name._show {
@@ -831,6 +839,7 @@ ul {
   height: 100%;
   -o-object-fit: contain;
   object-fit: contain;
+  pointer-events: none;
 }
 
 .menu__item-title {
