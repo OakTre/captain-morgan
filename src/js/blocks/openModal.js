@@ -20,7 +20,7 @@ export default () => {
 					heroButton.classList.remove("_active");
 				}, 200)
 
-				enableBodyScroll(warningModal);
+				clearAllBodyScrollLocks();
 
 				let date = new Date(new Date().getTime() + 259200 * 1000);  //3 days
     			document.cookie = "age_true=checked; path=/; expires=" + date.toUTCString();
