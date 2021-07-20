@@ -6,6 +6,14 @@
 	min-height: 600px;
 	overflow: hidden;
 
+	&__mobile-block {
+		display: none;
+
+		@include _767 {
+			display: block;
+		}
+	}
+
 	&__info {
 		position: absolute;
 		top: 100px;
@@ -197,6 +205,28 @@
 
 		&__info {
 			top: 150px;
+		}
+	}
+
+	@include _767 {
+		height: auto;
+		min-height: 600px;
+
+		&__mobile-img {
+			position: relative;
+			padding-top: 170px;
+		}
+
+		&__video {
+			display: none;
+		}
+
+		&__info {
+			display: none;
+		}
+
+		&__texts {
+			display: none;
 		}
 	}
 }

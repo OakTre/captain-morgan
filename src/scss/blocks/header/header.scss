@@ -98,4 +98,10 @@
 			width: 80px;
 		}
 	}
+
+	@include _320 {
+		&__burger {
+			top: 0;
+		}
+	}
 }

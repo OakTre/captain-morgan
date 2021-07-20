@@ -26,4 +26,51 @@
 			padding: 25px 0;
 		}
 	}
+
+	@include _767 {
+		&__links {
+			position: static;
+			top: auto;
+			right: auto;
+			bottom: auto;
+			left: auto;
+			display: flex;
+
+			.icon-instagram {
+				fill: $color-dark;
+			}
+
+			.policy {
+				color: $color-dark;
+				font-size: 1rem;
+			}
+		}
+
+		&__text {
+			margin-bottom: 25px;
+			text-align: center;
+		}
+
+		.icon-wraning {
+			display: none;
+		}
+
+		&__container {
+			flex-direction: column;
+			align-items: stretch;
+			justify-content: stretch;
+		}
+	}
+
+	@include _480 {
+		&__text {
+			font-size: 1rem;
+		}
+	}
+
+	@include _320 {
+		.policy {
+			font-size: 0.9rem;
+		}
+	}
 }

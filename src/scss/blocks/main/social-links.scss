@@ -14,6 +14,10 @@
 	@include _1280 {
 		bottom: 22px;
 	}
+
+	@include _767 {
+		display: none;
+	}
 }
 
 .inst-link {

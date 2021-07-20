@@ -1,0 +1,82 @@
+.mobile-block {
+	position: relative;
+
+	&__title {
+		position: absolute;
+		left: 50%;
+		z-index: 100;
+		margin: 0;
+		margin-right: -50%;
+		color: $color-white;
+		font-weight: 800;
+		font-size: rem(40px);
+		letter-spacing: 2px;
+		text-align: center;
+		transform: translateX(-50%);
+
+		span {
+			font-weight: 100;
+		}
+
+		&._first {
+			top: 170px;
+		}
+
+		&._second {
+			top: 24.2%;
+		}
+
+		&._third {
+			top: 51%;
+		}
+
+		&._fourth {
+			top: 72%;
+			left: 30px;
+			margin-right: 0;
+			text-align: left;
+			transform: none;
+		}
+
+		&._fifth {
+			top: 87%;
+			right: 30px;
+			left: auto;
+			margin-right: 0;
+			font-size: 3.5rem;
+			text-align: right;
+			transform: none;
+		}
+
+		@include _500 {
+			font-size: 2.1rem;
+
+			&._fifth {
+				font-size: 2.5rem;
+			}
+		}
+
+		@include _480 {
+			&._first {
+				top: 145px;
+			}
+		}
+
+		@include _375 {
+			font-size: 1.8rem;
+
+			&._second {
+				top: 25.2%;
+				max-width: 90%;
+			}
+
+			&._third {
+				max-width: 90%;
+			}
+
+			&._fifth {
+				font-size: 2rem;
+			}
+		}
+	}
+}
