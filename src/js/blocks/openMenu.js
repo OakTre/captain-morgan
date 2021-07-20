@@ -70,6 +70,8 @@ export default () => {
 			if (!e.target.classList.contains("menu") && !e.target.classList.contains("header__burger") && !e.target.classList.contains("menu__content") && !e.target.classList.contains("menu__list") && !e.target.classList.contains("menu__title") && !e.target.classList.contains("menu__content_inner") && !e.target.classList.contains("menu__item") && !e.target.classList.contains("menu__item-img") && !e.target.classList.contains("menu__item-title") && !e.target.classList.contains("header")) {
 				timeline.reverse();
 
+				flag=true;
+
 				burgerButton.classList.remove("_active");
 
 				clearAllBodyScrollLocks();

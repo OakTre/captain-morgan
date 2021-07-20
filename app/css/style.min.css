@@ -861,6 +861,10 @@ ul {
   width: 8px;
 }
 
+.menu__content_inner .simplebar-content-wrapper {
+  overflow: scroll!important;
+}
+
 .menu__title {
   margin: 30px 0 0;
   font-weight: 800;

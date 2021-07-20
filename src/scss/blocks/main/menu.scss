@@ -29,6 +29,10 @@
 			top: 60px;
 			width: 8px;
 		}
+
+		.simplebar-content-wrapper {
+			overflow: scroll !important;
+		}
 	}
 
 	&__title {
