@@ -71,6 +71,8 @@ export default () => {
 				timeline.reverse();
 
 				burgerButton.classList.remove("_active");
+
+				clearAllBodyScrollLocks();
 			}
 		}
 	});
