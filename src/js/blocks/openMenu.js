@@ -6,6 +6,7 @@ export default () => {
 	const menu = document.querySelector(".menu");
 	const menuItems = menu.querySelectorAll(".menu__item");
 	const menuTitle = menu.querySelector(".menu__title");
+	const menuContainer = menu.querySelector(".menu__content_inner");
 
 	let timeline = gsap.timeline({
 		paused: true,
@@ -50,11 +51,11 @@ export default () => {
 
 		switch (flag) {
 			case true:
-				disableBodyScroll(menu);
+				disableBodyScroll(menuContainer);
 				flag=false;
 				break;
 			case false:
-				enableBodyScroll(menu);
+				clearAllBodyScrollLocks();
 				flag=true;
 				break;
 		}
