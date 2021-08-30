@@ -23,3 +23,40 @@
 Если же открыть Bash в этой же папке что и проект - ключи попадут прямо в нее. **Главное не забудь удалить их оттуда чтобы они не попали в файлы репозитория!**
 
 В этой папке находятся ключи id_rsa и id_rsa.pub, приватный и публичный ключи соответственно.
+
+### Добавление ключей
+
+После того как мы создали ключи, их нужно добавить на хостинг и в репозиторий.
+
+Сначала добавим ключ на хостинг (на примере beget). У нашего хостинга есть подробная инструкция по добавлению ключей [здесь](https://beget.com/ru/kb/how-to/ssh/avtomaticheskaya-ssh-avtorizacziya-po-klyuchu)
+
+Затем добавим ключ в наш репозиторий. Идем в репозиторий GitHub, переходим в **Settings**, оттуда переходим в **Secrets**. Внутри нужно будет назвать секрет и ввести приватный ключ (сохраните его заранее в буфер обмена). Назови ключ просто – **key**, вставляй ключ и сохраняй.
+
+### Создаем файл для деплоя
+
+Чтобы сделать собственно сам деплой, то есть дать понять гиту, что при изменении кода надо залить его на удаленный сервер, нам нужно написать скрипт на языке Yaml. Ниже будет код, который просто нужено будет скопировать.
+
+```yaml
+name: Deploy
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      # Setup key
+      - run: set -eu
+      - run: mkdir "$HOME/.ssh"
+      - run: echo "${{ secrets.key }}" > "$HOME/.ssh/key"
+      - run: chmod 600 "$HOME/.ssh/key"
+      # Build
+      - run: npm ci
+      - run: gulp build
+      # Deploy
+      - run: cd app && rsync -e "ssh -i $HOME/.ssh/key -o StrictHostKeyChecking=no" --archive --compress --delete . baza3@baza3.beget.tech:/home/b/baza3/degorov.ru/public_html/captain-morgan
+```
