@@ -1,7 +1,7 @@
 # Сайт лендинг для проекта Captain Morgan
 
 ## Ссылка на проект
-[проект](https://oaktre.github.io/captain-morgan/app/)br
+[проект](https://oaktre.github.io/captain-morgan/app/)
 
 ## Список команд
 
